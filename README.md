@@ -1,1 +1,1 @@
-# pythonRAD_proj01
+#Pg do projeto da disciplina de desenvolvimento rápido de aplicações em python 
