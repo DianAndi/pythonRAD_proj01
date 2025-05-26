@@ -1,6 +1,4 @@
-def gerador_senhas():
-
-import random as rd 
+import random
 
 print('=================================\n||      Gerador de Senhas      ||\n=================================')
 
@@ -33,7 +31,7 @@ def geraSenha(a_senha, b_senha):
 
         while len(senha) < b_senha:
             senha.append(random.choice(especiais))
-             if len(senha) == b_senha:
+            if len(senha) == b_senha:
                  break
             senha.append(random.choice(numeros))
             if len(senha) == b_senha:
