@@ -1,4 +1,5 @@
 import random
+import sqlite3
 
 print('=================================\n||      Gerador de Senhas      ||\n=================================')
 
