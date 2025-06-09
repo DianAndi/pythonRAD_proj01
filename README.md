@@ -26,6 +26,8 @@ Letras minúsculas: "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 
 Letras maiúsculas: "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z".
 
-P executar o programa, rodar em ambiente de desv Python ou abrir o prompt de comando e executar o arq
+P executar o programa, rodar em ambiente de desv Python ou abrir o prompt de comando e executar o arquivo
+
+-> para frontend usar html, css e javascript
 
 
