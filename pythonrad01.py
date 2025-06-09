@@ -3,6 +3,35 @@ import sqlite3
 
 print('=================================\n||      Gerador de Senhas      ||\n=================================')
 
+#bco de dados aqui
+def criar_tabela_senhas():
+    conn = sqlite3.connect('senhas_geradas.db') 
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS senhas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            senha TEXT NOT NULL,
+            data_geracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+def salvar_senha(senha):
+    conn = sqlite3.connect('senhas_geradas.db')
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO senhas (senha) VALUES (?)", (senha,))
+    conn.commit()
+    conn.close()
+
+def consultar_senhas():
+    conn = sqlite3.connect('senhas_geradas.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT id, senha, data_geracao FROM senhas ORDER BY data_geracao DESC")
+    senhas = cursor.fetchall()
+    conn.close()
+    return senhas
+
 num_senhas = int(input("Número de senhas: ") or 1)
 tamanho_senha = 0
 
