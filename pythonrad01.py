@@ -32,6 +32,8 @@ def consultar_senhas():
     conn.close()
     return senhas
 
+criar_tabela_senhas()
+
 num_senhas = int(input("Número de senhas: ") or 1)
 tamanho_senha = 0
 
