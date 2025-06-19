@@ -7,7 +7,9 @@ números e caracteres especiais, salvando o histórico das senhas geradas em um 
 
 ## 📸 Visual
 
-> 💻 Interface simples, com formulário para gerar senhas e uma página de histórico.  
+> 💻 Interface simples, com formulário para gerar senhas e uma página de histórico.
+> ![image](https://github.com/user-attachments/assets/ef76d53f-55a5-475e-9989-50e69bf9007d)
+  
 
 ---
 
