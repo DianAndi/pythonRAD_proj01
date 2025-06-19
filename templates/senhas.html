@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Senhas</title>
+</head>
+<body>
+    <h1>Histórico de Senhas</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Senha</th>
+            <th>Data de Geração</th>
+        </tr>
+        {% for id, senha, data in senhas %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ senha }}</td>
+            <td>{{ data }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <h1>Gerador de Senhas</h1>
+    <form method="post" action="/gerar">
+        <label>Quantidade de senhas:</label>
+        <input type="number" name="quantidade" min="1" value="1"><br><br>
+        <label>Tamanho da senha (mínimo 8):</label>
+        <input type="number" name="tamanho" min="8" value="8"><br><br>
+        <button type="submit">Gerar</button>
+    </form>
+
+    {% if senhas %}
+        <h2>Senhas Geradas:</h2>
+        <ul>
+            {% for senha in senhas %}
+                <li>{{ senha }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <br><a href="/senhas">Ver histórico</a>
+</body>
+</html>
