@@ -6,21 +6,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Histórico de Senhas</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Senha</th>
-            <th>Data de Geração</th>
-        </tr>
-        {% for id, senha, data in senhas %}
-        <tr>
-            <td>{{ id }}</td>
-            <td>{{ senha }}</td>
-            <td>{{ data }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <br><a href="/">Voltar</a>
+    <div class="container">
+        <h1>Histórico de Senhas</h1>
+
+        {% if senhas %}
+        <div class="resultado">
+            <h2>Últimas Senhas Geradas:</h2>
+            <ul>
+                {% for senha in senhas %}
+                    <li>
+                        <strong>{{ senha[1] }}</strong> — {{ senha[2] }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% else %}
+        <p>Nenhuma senha foi gerada ainda.</p>
+        {% endif %}
+
+        <br>
+        <a href="/" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #007bff;">← Voltar para o Gerador</a>
+    </div>
 </body>
 </html>
