@@ -1,33 +1,90 @@
-# Gerador de senhas aleatórias conforme solicitação do usuário - Projeto RAD
+# 🔐 Gerador de Senhas com Flask
 
-Interações ocorrerão da seguinte forma:
+Este é um projeto de aplicação web simples, criado com [Flask](https://flask.palletsprojects.com/), para gerar senhas aleatórias com letras, 
+números e caracteres especiais, salvando o histórico das senhas geradas em um banco de dados SQLite.
 
-O usuário pede a quantia de caracteres, o sistema devolve com uma sequência aleatória
+---
 
-Pode ser usado em criações de contas, trocas de senhas e sugestão de senhas mais fortes
+## 📸 Visual
 
-Usuário clica em "sugerir senha forte", o sistema devolve o resultado
+> 💻 Interface simples, com formulário para gerar senhas e uma página de histórico.  
+
+---
+
+## 📚 Funcionalidades
+
+- ✅ Geração de senhas aleatórias seguras com:
+  - Letras maiúsculas e minúsculas
+  - Números
+  - Caracteres especiais
+- ✅ Escolha do número de senhas e tamanho mínimo (mínimo de 8 caracteres)
+- ✅ Salvamento automático das senhas geradas em um banco de dados SQLite
+- ✅ Página para consultar o histórico completo das senhas geradas
+- ✅ Interface web simples com HTML, CSS e Flask
+
+---
+
+## ⚙️ Tecnologias utilizadas
+
+- [Python 3.x](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/)
+- [SQLite](https://www.sqlite.org/index.html)
+- HTML5 + CSS3
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+- gerador_senhas_flask/
+- app.py               # Arquivo principal Flask
+- senha_utils.py       # Funções de geração e banco de dados
+- requirements.txt     # Dependências do projeto
+- .gitignore           # Arquivos ignorados pelo Git
+- templates/           # Páginas HTML
+  - index.html
+  - senhas.html
+- static/              # Arquivos estáticos (CSS)
+  - style.css
 
 
-- Deve pedir ao user qtas senhas deve gerar
-- O tamanho de cada senha
+---
 
-- Tamanho mínimo: 8 dígitos
+## 🚀 Exectando o projeto localmente  
 
--> Biblioteca "random" p gerar senhas, escolhe aleatoriamente os caracteres e ordem
+### 1. Clone o repositório  
 
-P gerar as senhas o programa vai usar os seguintes caracteres:
-
-Especiais: ".", "+", "-", "@", "#", "*", "!", "?", "~";
-
-Números: "0", "1", "2", "3", "4", "5", "6", "7", "8", "9";
-
-Letras minúsculas: "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z";
-
-Letras maiúsculas: "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z".
-
-P executar o programa, rodar em ambiente de desv Python ou abrir o prompt de comando e executar o arquivo
-
--> para frontend usar html, css e javascript
+gitclone: https://github.com/seuusuario/gerador-senhas-flask.git  
+cd gerador-senhas-flask
 
 
+
+### 2. Crie um ambiente virtual (opcional, mas recomendado)  
+
+python -m venv venv  
+source venv/bin/activate    # Linux/Mac  
+venv\Scripts\activate       # Windows  
+
+
+
+### 3. Instale as dependências  
+
+pip install -r requirements.txt  
+
+
+
+### 4. Rodar o app
+
+python app.py
+
+
+---
+## 🧪 Como usar
+Vá para a página inicial (/)
+
+Escolha a quantidade e o tamanho das senhas
+
+Clique em Gerar
+
+Veja o resultado abaixo do formulário
+
+Histórico de senhas geradas aparecem no formulário abaixo
